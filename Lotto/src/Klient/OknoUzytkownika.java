@@ -44,19 +44,27 @@ public class OknoUzytkownika {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JButton btnStw = new JButton("Stworz konto");
+		
+		JButton btnZamknij = new JButton("Zamknij");
+		
+		
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(95)
 					.addComponent(btnStw)
-					.addContainerGap(250, Short.MAX_VALUE))
+					.addGap(47)
+					.addComponent(btnZamknij)
+					.addContainerGap(118, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-					.addContainerGap(198, Short.MAX_VALUE)
-					.addComponent(btnStw)
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(208, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnStw)
+						.addComponent(btnZamknij))
 					.addGap(41))
 		);
 		frame.getContentPane().setLayout(groupLayout);
